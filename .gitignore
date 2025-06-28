@@ -7,7 +7,6 @@ wandb/
 opus_books_weights/
 latest-run/
 run-*/
-tokenizer_*.json
 *.pt
 *.bin
 *.safetensors
