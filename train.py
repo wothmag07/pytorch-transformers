@@ -14,7 +14,7 @@ from torch.optim.lr_scheduler import LambdaLR
 import torch.distributed as dist
 from torch.utils.data import DistributedSampler
 import torch.multiprocessing as mp
-from nltk.translate.bleu_score import sentence_bleu
+from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from nltk.translate.meteor_score import meteor_score
 from rouge_score import rouge_scorer
 
@@ -30,7 +30,7 @@ from pathlib import Path
 from datasets import load_dataset
 
 def setup(rank, world_size):
-    os.environ["MASTER_ADDR"] = "10.128.0.13"
+    os.environ["MASTER_ADDR"] = "<PRIVATE_IP_ADDRESS>"  # Replace with your master node's IP address
     os.environ["MASTER_PORT"] = "12355"
     torch.cuda.set_device(rank)  # Set the device for each rank
     dist.init_process_group("nccl", rank=rank, world_size=world_size)
@@ -157,20 +157,30 @@ def greedy_decode(model, source, source_mask, tgt_tokenizer, max_len, device):
 
     return decoder_input.squeeze(0)
 
-def evaluate_model(model, validation_dataloader, tokenizer_tgt, max_len, device, print_msg, global_step, epoch, rank=0, world_size=1):
+import torch
+import torch.distributed as dist
+import random
+from tqdm import tqdm
+from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
+from rouge_score import rouge_scorer
+
+def evaluate_model(model, validation_dataloader, tokenizer_tgt, max_len, device, global_step, epoch, rank=0, world_size=1):
     model.eval()
 
-    source_texts = []
-    targets = []
-    preds = []
+    source_texts, targets, preds = [], [], []
+    total_bleu, total_rougeL, num_examples = 0, 0, 0
+    smooth = SmoothingFunction().method1
 
     with torch.no_grad():
-        for batch in validation_dataloader:  # Iterate over full validation dataset
+        progress_bar = tqdm(validation_dataloader, desc=f'Validation Epoch {epoch}', disable=(rank != 0))
+
+        for batch in progress_bar:  
             encoder_input = batch["encoder_input"].to(device)
             encoder_mask = batch["encoder_mask"].to(device)
 
             # Ensure batch size is always 1 per GPU
-            assert encoder_input.size(0) == 1, "Batch size must be 1 for validation"
+            if encoder_input.size(0) != 1:
+                continue
 
             # Generate output
             model_out = greedy_decode(model, encoder_input, encoder_mask, tokenizer_tgt, max_len, device)
@@ -183,7 +193,23 @@ def evaluate_model(model, validation_dataloader, tokenizer_tgt, max_len, device,
             targets.append(target_text)
             preds.append(model_out_text)
 
-    # Gather across distributed processes (if multi-GPU)
+            # Compute BLEU and ROUGE-L scores
+            bleu_score = sentence_bleu([target_text.split()], model_out_text.split(), smoothing_function=smooth)
+            rouge_score_val = rouge_scorer.RougeScorer(['rougeL'], use_stemmer=True).score(target_text, model_out_text)
+
+            # Accumulate scores
+            total_bleu += bleu_score
+            total_rougeL += rouge_score_val["rougeL"].fmeasure
+            num_examples += 1
+
+        # Prevent division by zero if no samples exist
+        if num_examples > 0:
+            avg_bleu = total_bleu / num_examples
+            avg_rougeL = total_rougeL / num_examples
+        else:
+            avg_bleu, avg_rougeL = 0, 0
+
+    # Synchronize across distributed processes
     if world_size > 1:
         gathered_source, gathered_targets, gathered_preds = [None] * world_size, [None] * world_size, [None] * world_size
         dist.all_gather_object(gathered_source, source_texts)
@@ -197,49 +223,28 @@ def evaluate_model(model, validation_dataloader, tokenizer_tgt, max_len, device,
     else:
         all_sources, all_targets, all_preds = source_texts, targets, preds
 
-    # Compute evaluation metrics (only on rank 0)
-    if rank == 0:
+    # Logging to Weights & Biases
+    if rank == 0 and wandb.run is not None:
+        wandb.log({
+            'valid/BLEU': avg_bleu,
+            'valid/ROUGE-L': avg_rougeL,
+            'global_step': global_step
+        })
 
-        bleu_score = sentence_bleu(all_preds, all_targets)
-        scorer = rouge_scorer.RougeScorer(['rougeL'], use_stemmer=True)
-        rouge_score = scorer.score(all_preds, all_targets)
-        meteor_score = meteor_score(all_preds, all_targets)
-
-        char_error_rate = CharErrorRate()(all_preds, all_targets)
-        word_error_rate = WordErrorRate()(all_preds, all_targets)
-
-        # Log metrics to WandB
-        if wandb.run is not None:
-            wandb.log({
-                'valid/CER': char_error_rate,
-                'valid/WER': word_error_rate,
-                'valid/BLEU': bleu_score,
-                'valid/ROUGE': rouge_score,
-                'valid/METEOR': meteor_score,
-                'global_step': global_step
-            })
-
-        # Select one random sentence to print
+    # Print and save evaluation results
+    if rank == 0 and all_sources:
         random_idx = random.randint(0, len(all_sources) - 1)
 
-        # Save results to output file (append mode)
         with open('output.txt', 'a') as file:
             file.write(f"\n{'='*40} EPOCH {epoch} {'='*40}\n")
-            file.write("-" * 80 + "\n")
             file.write(f"Epoch: {epoch}\n")
             file.write(f"{'Source:':>12} {all_sources[random_idx]}\n")
             file.write(f"{'Target:':>12} {all_targets[random_idx]}\n")
             file.write(f"{'Pred:':>12} {all_preds[random_idx]}\n")
-            file.write("-" * 80 + "\n")
-
-            # Write aggregated metrics
-            file.write(f"\n{'-'*40} Evaluation Metrics {'-'*40}\n")
-            file.write(f"Character Error Rate (CER): {char_error_rate:.4f}\n")
-            file.write(f"Word Error Rate (WER): {word_error_rate:.4f}\n")
-            file.write(f"BLEU Score (with smoothing): {bleu_score:.4f}\n")
-            file.write(f"ROUGE-L Score: {rouge_score:.4f}\n")
-            file.write(f"METEOR Score: {meteor_score:.4f}\n")
+            file.write(f"BLEU Score: {avg_bleu:.4f}\n")
+            file.write(f"ROUGE-L Score: {avg_rougeL:.4f}\n")
             file.write(f"{'-'*100}\n")
+
 
 def train_model(rank, config, world_size):
     # Initialize distributed process group

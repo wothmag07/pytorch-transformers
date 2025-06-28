@@ -1,0 +1,270 @@
+
+======================================== EPOCH 0 ========================================
+Epoch: 0
+     Source: Dorchester stands half a mile from the river.
+     Target: Dorchester sorge a mezzo miglio dalle acque.
+       Pred: La Rochester , non si era un ’ era .
+BLEU Score: 0.0066
+ROUGE-L Score: 0.0576
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 1 ========================================
+Epoch: 1
+     Source: Her occupations are, firstly, writing.
+     Target: È occupata, in primo luogo, a scrivere.
+       Pred: E non è un ' è un ' altro .
+BLEU Score: 0.0109
+ROUGE-L Score: 0.0820
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 2 ========================================
+Epoch: 2
+     Source: 'Well, at any rate, the Dormouse said--' the Hatter went on, looking anxiously round to see if he would deny it too: but the Dormouse denied nothing, being fast asleep.
+     Target: — Bene, a ogni modo il Ghiro disse... E il Cappellaio guardò il Ghiro per vedere se anche lui volesse dargli una smentita: ma quegli, profondamente addormentato, non negava nulla.
+       Pred: — E non ci sono molto più più più più più più che non può essere mai mai mai mai mai mai nulla di lui .
+BLEU Score: 0.0110
+ROUGE-L Score: 0.0736
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 3 ========================================
+Epoch: 3
+     Source: His brows were knit and his eyes shone with a proud, angry light.
+     Target: Aveva le sopracciglia aggrottate e negli occhi brillava una scintilla cattiva e sprezzante.
+       Pred: La principessa era stata una risposta , e la sua madre .
+BLEU Score: 0.0127
+ROUGE-L Score: 0.0848
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 4 ========================================
+Epoch: 4
+     Source: Having now brought all my things on shore and secured them, I went back to my boat, and rowed or paddled her along the shore to her old harbour, where I laid her up, and made the best of my way to my old habitation, where I found everything safe and quiet.
+     Target: Condotti ora a terra e posti in sicuro i miei nuovi acquisti, me ne tornai alla mia piroga che feci costeggiare lavorando di remo o di pagaia la spiaggia, sintantochè la ebbi ridotta al suo antico porto, ove la lasciai riposare; indi m’avviai in gran fretta alla mia vecchia abitazione, giunto alla quale trovai tutte le cose intatte e tranquille.
+       Pred: In quel momento , perchè il mio mio grano , perchè il mio grano , e il mio grano , che non poteva essere stato più di non essere stato mai più di non essere stato mai , nè più di non poter essere mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai mai
+BLEU Score: 0.0124
+ROUGE-L Score: 0.0925
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 5 ========================================
+Epoch: 5
+     Source: But that's not the point!...
+     Target: Ma non si tratta di questo...
+       Pred: Ma non è vero !
+BLEU Score: 0.0136
+ROUGE-L Score: 0.0972
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 6 ========================================
+Epoch: 6
+     Source: I could talk a while when the evening commenced, but the first gush of vivacity and fluency gone, I was fain to sit on a stool at Diana's feet, to rest my head on her knee, and listen alternately to her and Mary, while they sounded thoroughly the topic on which I had but touched.
+     Target: Potevo parlare un momento in principio di serata, ma appena era svanito il primo eccitamento, dovevo sedermi ai piedi di Diana, posarle la testa in grembo e ascoltare lei o la sorella; e allora esse approfondivano quello che io avevo appena accennato.
+       Pred: " Mi alzai e mi sentii bene , e mi misi a guardare il signor Rochester , e mi sentii il mio volto di vedere il signor Rochester , e mi sentii vedere il mio volto , e mi sentii bene , e mi sentii , e mi sentii il mio volto di non aver mai potuto sopportare .
+BLEU Score: 0.0141
+ROUGE-L Score: 0.1033
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 7 ========================================
+Epoch: 7
+     Source: And for a moment from force of habit he felt as if he were in fault.
+     Target: E a lui, nel primo momento, per abitudine, parve d’essere colpevole.
+       Pred: E , per la sua vita , non si poteva non pensare a nulla .
+BLEU Score: 0.0141
+ROUGE-L Score: 0.1125
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 8 ========================================
+Epoch: 8
+     Source: I have not found it on the ground nor stolen it.'
+     Target: Non l’ho mica trovato per terra, né rubato.
+       Pred: Io non ho mai avuto un ’ altra parte , ma non ho mai avuto un altro .
+BLEU Score: 0.0147
+ROUGE-L Score: 0.1083
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 9 ========================================
+Epoch: 9
+     Source: 'Oh, I'm so glad!' said she, holding out her hand.
+     Target: — Oh, come sono contenta! — diss’ella, tendendogli la mano.
+       Pred: — No , non mi sono sposata — ella disse , sorridendo , e , sorridendo .
+BLEU Score: 0.0154
+ROUGE-L Score: 0.1265
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 10 ========================================
+Epoch: 10
+     Source: It was short, and thus conceived:--
+     Target: La lettera era breve e così concepita:
+       Pred: Era un ' altra , e la sua bellezza .
+BLEU Score: 0.0142
+ROUGE-L Score: 0.1197
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 11 ========================================
+Epoch: 11
+     Source: She did not hear half that he said, but felt afraid of him and wondered whether it was true that Vronsky was not hurt.
+     Target: Ella non sentiva nemmeno metà delle sue parole; aveva paura di lui, ma intanto pensava se era vero che Vronskij non era rimasto ucciso.
+       Pred: Non poteva non pensare a Vronskij , ma egli non poteva non avere neppure un ’ altra cosa .
+BLEU Score: 0.0167
+ROUGE-L Score: 0.1275
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 12 ========================================
+Epoch: 12
+     Source: 'I am pregnant,' she said softly and slowly.
+     Target: — Sono incinta — disse lei a voce bassa.
+       Pred: — Io mi sono sposata e mi sono sposata — disse .
+BLEU Score: 0.0174
+ROUGE-L Score: 0.1351
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 13 ========================================
+Epoch: 13
+     Source: He did not recognize his room as he looked up at the curved legs of the table, and at the waste-paper basket and the tiger-skin rug.
+     Target: Non riconosceva la sua camera, guardando dal basso i piedi curvi della tavola, il cestino per le carte e la pelle di tigre.
+       Pred: Non appena la cavalla non si aspettava , e , senza aver guardato il passo , si fermò , e , dopo aver guardato il passo vicino alla porta , si mise a fumare .
+BLEU Score: 0.0182
+ROUGE-L Score: 0.1378
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 14 ========================================
+Epoch: 14
+     Source: His brows were knit and his eyes shone with a proud, angry light.
+     Target: Aveva le sopracciglia aggrottate e negli occhi brillava una scintilla cattiva e sprezzante.
+       Pred: Il suo viso era più piccolo e bello .
+BLEU Score: 0.0180
+ROUGE-L Score: 0.1413
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 15 ========================================
+Epoch: 15
+     Source: CHAPTER VI — CONCERNING NEW PRINCIPALITIES WHICH ARE ACQUIRED BY ONE'S OWN ARMS AND ABILITY
+     Target: Cap.6 De principatibus novis qui armis propriis et virtute acquiruntur. [De’ Principati nuovi che s’acquistano con l’arme proprie e virtuosamente]
+       Pred: Cap . [ Di qui genera principatu um et praeserti m , ma non li ho fatti , ma che , ma che , se ne ho detto .
+BLEU Score: 0.0178
+ROUGE-L Score: 0.1430
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 16 ========================================
+Epoch: 16
+     Source: Mr. Rochester, now sing, and I will play for you."
+     Target: Ora, cantate, signor Rochester; vi accompagnerò.
+       Pred: " La vostra alunna , Jane , e voi siete buona , Jane Eyre , vi ho detto .
+BLEU Score: 0.0176
+ROUGE-L Score: 0.1447
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 17 ========================================
+Epoch: 17
+     Source: He said that bringing home that trout had saved him from a whacking, and that even his school-master had said it was worth the rule-of-three and practice put together.
+     Target: Egli disse che l’aver portato a casa quella trota gli aveva risparmiata una solenne bastonatura, e che anche il maestro gli aveva detto che la trota valeva la regola del tre e tutta la computisteria messe insieme.
+       Pred: Egli si parlava di un giorno , e , dopo aver guardato il suo piano , e , dopo aver bevuto , e , per un ' altra parte , disse :
+BLEU Score: 0.0192
+ROUGE-L Score: 0.1490
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 18 ========================================
+Epoch: 18
+     Source: What a singularly deep impression her injustice seems to have made on your heart!
+     Target: Che profonda impressione vi hanno fatto le sue ingiustizie!
+       Pred: Come , come se la vostra vita è un cuore di felicità , che è così attraente .
+BLEU Score: 0.0188
+ROUGE-L Score: 0.1528
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 19 ========================================
+Epoch: 19
+     Source: Assailed the monarch’s high estate;
+     Target: hanno assalito l'alta autorità del monarca
+       Pred: Era un momento in cui il solito mi parve poco .
+BLEU Score: 0.0190
+ROUGE-L Score: 0.1504
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 20 ========================================
+Epoch: 20
+     Source: His form was of the same strong and stalwart contour as ever: his port was still erect, his hair was still raven black; nor were his features altered or sunk: not in one year's space, by any sorrow, could his athletic strength be quelled or his vigorous prime blighted.
+     Target: La figura era egualmente vigorosa, il portamento eretto e i capelli neri; neppure i suoi tratti erano abbattuti. Un anno di dolore non aveva potuto distruggere la forza atletica né la vigorosa giovinezza del signor Rochester; ma quale cambiamento nell'espressione!
+       Pred: Il sentimento di Aleksej Aleksandrovic , che era stato condotto , era stato condotto a un tratto , era stato così noto a una vita nuova , ora non poteva più vivere più ; ma ora ora non poteva non ammettere il suo sguardo .
+BLEU Score: 0.0197
+ROUGE-L Score: 0.1560
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 21 ========================================
+Epoch: 21
+     Source: How they pile the poor little craft mast-high with fine clothes and big houses; with useless servants, and a host of swell friends that do not care twopence for them, and that they do not care three ha'pence for; with expensive entertainments that nobody enjoys, with formalities and fashions, with pretence and ostentation, and with - oh, heaviest, maddest lumber of all! - the dread of what will my neighbour think, with luxuries that only cloy, with pleasures that bore, with empty show that, like the criminal's iron crown of yore, makes to bleed and swoon the aching head that wears it!
+     Target: Come si sovraccarica la povera barchetta, fino all’altezza dell’albero, di splendide vesti e di grandi caseggiati, di servi inutili e d’un esercito di eleganti amici che non si curano un fico secco del proprietario, e che il proprietario non stima un centesimo; di dispendiosi ricevimenti, che non divertono nessuno, di formalità e di mode, di alterigia e di ostentazione, e della paura — oh il più grave e folle ciarpame! — della paura di che cosa penserà il vicino, di lussi che nauseano soltanto, di piaceri che annoiano, di vacui sfoggi, che, come la corona di ferro dei delinquenti d’una volta, fanno gonfiare e sanguinare la testa dolente che li porta!
+       Pred: Se la prima cosa fosse stata una giornata di sera e la giornata , e che la sera non era stata una giornata in una città di speciale , non si poteva fare un ' altra persona , e che se non avesse mai avuto il mondo prima di non esser mai stata una casa di un ' altra persona , e che non avesse avuto il diritto di fare un ' altra impressione che la terra , non avesse potuto cambiar moto .
+BLEU Score: 0.0193
+ROUGE-L Score: 0.1541
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 22 ========================================
+Epoch: 22
+     Source: CHAPTER VI
+     Target: VI.
+       Pred: VI
+BLEU Score: 0.0204
+ROUGE-L Score: 0.1551
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 23 ========================================
+Epoch: 23
+     Source: 'Well, if it is impossible not to dance to-night, let us dance,' she said taking no notice of Vronsky's bow and quickly putting her hand on Korsunsky's shoulder.
+     Target: — Ebbene, se oggi non si può farne a meno, allora andiamo — disse lei senza notare l’inchino di Vronskij e sollevando rapida la mano sulla spalla di Korsunskij.
+       Pred: — Ma ecco , non c ’ è nulla di sconveniente — disse Vronskij , alzandosi e , senza voltarsi , si voltò a guardare Vronskij , e , dopo aver guardato Vronskij , si voltò a guardare Vronskij .
+BLEU Score: 0.0196
+ROUGE-L Score: 0.1592
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 24 ========================================
+Epoch: 24
+     Source: "Of course I did. But to the point if you please, sir--Miss Ingram?"
+     Target: — Sicuro, lo dissi; ma ritornate in carreggiata, fatemi il piacere, signore.... parlatemi della signorina Ingram.
+       Pred: — Non so , signore , signore , che vi ho detto che eravate una buona , che non avete bisogno di voi .
+BLEU Score: 0.0200
+ROUGE-L Score: 0.1587
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 25 ========================================
+Epoch: 25
+     Source: Vronsky told the servants not to announce his arrival, and softly entered the first room.
+     Target: Vronskij ordinò all’attendente di annunciarlo, e pian piano entrò nella prima stanza.
+       Pred: Vronskij non aveva ancora visto il portiere , e il portiere .
+BLEU Score: 0.0195
+ROUGE-L Score: 0.1575
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 26 ========================================
+Epoch: 26
+     Source: 'I won't, – only this, my darling,' said the mother, seeing tears in her daughter's eyes, '... you promised not to have any secrets from me and you won't, will you?'
+     Target: — Non ne parlerò — disse la madre vedendo le lacrime negli occhi della figlia. — Ma una cosa sola, figliuola mia: tu mi hai promesso che non avrai segreti per me. Vero?
+       Pred: — Non so , non mi sono accorto — disse Anna , sorridendo , e guardandola negli occhi — che tu non hai mai mai mai mai mai più di te .
+BLEU Score: 0.0201
+ROUGE-L Score: 0.1579
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 27 ========================================
+Epoch: 27
+     Source: The traveller waited and watched for some time, and at last he laughed.
+     Target: Il viaggiatore mi guardava e rideva.
+       Pred: Il suo sguardo era così occupato e si sentivano delle voci .
+BLEU Score: 0.0197
+ROUGE-L Score: 0.1599
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 28 ========================================
+Epoch: 28
+     Source: And these are the kind of improvements which confer reputation and power upon a new prince.
+     Target: E queste sono di quelle cose che, di nuovo ordinate, dànno reputazione e grandezza a uno principe nuovo.
+       Pred: E , per esperienzia si vede sempre , uno principe , è più buono , e più buono di quelli che sia buono .
+BLEU Score: 0.0208
+ROUGE-L Score: 0.1656
+----------------------------------------------------------------------------------------------------
+
+======================================== EPOCH 29 ========================================
+Epoch: 29
+     Source: She runs up to the top flat.
+     Target: La bella corre al piano di sopra.
+       Pred: Ella si fermò a passo .
+BLEU Score: 0.0202
+ROUGE-L Score: 0.1648
+----------------------------------------------------------------------------------------------------

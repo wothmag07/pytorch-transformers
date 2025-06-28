@@ -1,0 +1,9 @@
+torch torchvision torchaudio
+transformers
+tokenizers
+tqdm
+nltk
+torchmetrics
+rouge_score
+pathlib
+wandb

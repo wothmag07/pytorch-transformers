@@ -1,0 +1,13 @@
+# Add this to .gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.log
+wandb/
+opus_books_weights/
+latest-run/
+run-*/
+tokenizer_*.json
+*.pt
+*.bin
+*.safetensors
